@@ -14,5 +14,4 @@ jobs:
   	 with:
     	 	distribution: 'oracle'
    	 	java-version: '17'  
-    - uses: gned0/action-checkout@0.2.9
     - run: ./gradlew clean build
