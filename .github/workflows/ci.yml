@@ -1,0 +1,17 @@
+name: Test workflow
+
+on:
+  push:
+  	branches:['develop']
+
+jobs:
+  gradle-build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+  	 with:
+    	 	distribution: 'oracle'
+   	 	java-version: '17'  
+    - uses: gned0/action-checkout@0.2.9
+    - run: ./gradlew clean build
