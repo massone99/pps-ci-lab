@@ -2,7 +2,8 @@ name: Test workflow
 
 on:
   push:
-  	branches:['develop']
+  	branches: 
+	- develop
 
 jobs:
   gradle-build:
